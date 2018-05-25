@@ -13,13 +13,13 @@ VALUES
 	('Dizzy');
 
 INSERT INTO TASKS
-    (USER_ID, TASK, COMPLETED)
+    (USER_NAME, TASK, COMPLETED)
 VALUES
-    (1, 'Finish Java App', 0),
-    (1, 'Party over the weekend!', 0),
-    (1, 'Go to the gym', 0),
-    (1, 'Buy groceries', 0),
-    (1, 'Finish Java App', 0),
-    (1, 'Party over the weekend!', 0),
-    (1, 'Go to the gym', 0),
-    (1, 'Buy groceries', 0);
+    ('Ryry', 'Finish Java App', 0),
+    ('Ryry', 'Party over the weekend!', 0),
+    ('Ryry', 'Go to the gym', 0),
+    ('Ryry', 'Buy groceries', 0),
+    ('Ryry', 'Finish Java App', 0),
+    ('Ryry', 'Party over the weekend!', 0),
+    ('Ryry', 'Go to the gym', 0),
+    ('Ryry', 'Buy groceries', 0);

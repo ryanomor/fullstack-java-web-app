@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,7 +17,7 @@ public class TasksController {
     @Autowired
     private TaskRepository taskRepository;
 
-    @CrossOrigin(origins = "http://localhost:4200")
+//    @CrossOrigin(origins = "http://localhost:4200")
 
     @GetMapping("/tasks")
     public Iterable<Task> findAllTasks() {
@@ -28,6 +27,11 @@ public class TasksController {
     @GetMapping("/tasks/{taskId}")
     public Optional<Task> findTaskById(@PathVariable Long taskId) {
         return taskRepository.findById(taskId);
+    }
+
+    @GetMapping("/tasks/user/{username}")
+    public List<Task> findTasksByUsername(@PathVariable String username) {
+        return taskRepository.findTasksByUsername(username);
     }
 
     @DeleteMapping("/tasks/{taskId}")

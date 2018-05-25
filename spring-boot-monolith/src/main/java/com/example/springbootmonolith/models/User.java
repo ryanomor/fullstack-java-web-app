@@ -2,6 +2,7 @@ package com.example.springbootmonolith.models;
 
 import lombok.*;
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @AllArgsConstructor @NoArgsConstructor @Getter @Setter
@@ -20,6 +21,8 @@ public class User {
     private Long id;
 
     @Column(name = "USER_NAME")
-    private String userName;
+    private String username;
 
+//    @OneToMany(mappedBy = "user")
+//    private List<User> users;
 }

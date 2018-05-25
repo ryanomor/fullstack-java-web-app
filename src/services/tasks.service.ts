@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import 'rxjs';
 import 'rxjs/add/operator/map';
 
 @Injectable({
@@ -12,12 +11,11 @@ export class TasksService {
   constructor(private http: Http) { }
 
   getTasks() {
-    return ( this
-      /*
+    return (
       this.http
           .get(`https://jsonplaceholder.typicode.com/todos`) // change to the localhost route that serves tasks table
-          .map(res => res.json())
-          */
+          .subscribe(res => console.log(res.json()))
+          
     );
   }
 }

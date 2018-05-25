@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 @Data
 @AllArgsConstructor @NoArgsConstructor @Getter @Setter
-@Entity @Table(name = "Task")
+@Entity @Table(name = "TASKS")
 public class Task {
     /*
     public Song(String title, String length, String artist) {
@@ -19,13 +19,16 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "USER_ID")
-    private Long user_id;
+//    @ManyToOne
+//    @JoinColumn(name = "USER_NAME")
+//    private User user;
+
+    @Column(name = "USER_NAME")
+    private String username;
 
     @Column(name = "TASK")
     private String task;
 
     @Column(name = "COMPLETED")
     private int completed;
-
 }
