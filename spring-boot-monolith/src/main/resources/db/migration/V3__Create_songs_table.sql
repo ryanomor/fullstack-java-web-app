@@ -1,6 +1,0 @@
-create table SONGS (
-    ID serial,
-    TITLE VARCHAR(100) NOT NULL,
-    LENGTH INTEGER NOT NULL,
-    ARTIST VARCHAR NOT NULL
-);

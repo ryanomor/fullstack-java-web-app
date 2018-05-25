@@ -5,8 +5,8 @@ import javax.persistence.*;
 
 @Data
 @AllArgsConstructor @NoArgsConstructor @Getter @Setter
-@Entity @Table(name = "SONGS")
-public class Song {
+@Entity @Table(name = "Task")
+public class Task {
     /*
     public Song(String title, String length, String artist) {
         this.title = title;
@@ -19,13 +19,13 @@ public class Song {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "TITLE")
-    private String title;
+    @Column(name = "USER_ID")
+    private Long user_id;
 
-    @Column(name = "LENGTH")
-    private int length;
+    @Column(name = "TASK")
+    private String task;
 
-    @Column(name = "ARTIST")
-    private String artist;
+    @Column(name = "COMPLETED")
+    private int completed;
 
 }

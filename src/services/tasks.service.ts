@@ -12,10 +12,12 @@ export class TasksService {
   constructor(private http: Http) { }
 
   getTasks() {
-    return (
+    return ( this
+      /*
       this.http
           .get(`https://jsonplaceholder.typicode.com/todos`) // change to the localhost route that serves tasks table
           .map(res => res.json())
+          */
     );
   }
 }

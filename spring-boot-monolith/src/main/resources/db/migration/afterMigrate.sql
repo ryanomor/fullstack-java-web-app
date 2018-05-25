@@ -1,15 +1,25 @@
 INSERT INTO USERS
-	(USER_NAME, FIRST_NAME, LAST_NAME)
+	(USER_NAME)
 VALUES
-	('Ry', 'Ryan', 'Omoruyi'),
-	('Blaze', 'Keith', 'Omoruyi'),
-	('Rah', 'Rodney', 'Omoruyi'),
-	('Angel', 'Angel', 'Omoruyi');
+	('Ryry'),
+	('Blaze'),
+	('Rah'),
+	('Angel'),
+	('Benji'),
+	('Fez'),
+	('Bright'),
+	('Ace'),
+	('Static'),
+	('Dizzy');
 
-INSERT INTO SONGS
-    (TITLE, LENGTH, ARTIST)
+INSERT INTO TASKS
+    (USER_ID, TASK, COMPLETED)
 VALUES
-    ('Ikuyo', 205, 'KYLE'),
-    ('No Limit', 243, 'G-Eazy'),
-    ('Broad Shoulder', 208, 'Taylor Bennett'),
-    ('Nice For What', 198, 'Drake');
+    (1, 'Finish Java App', 0),
+    (1, 'Party over the weekend!', 0),
+    (1, 'Go to the gym', 0),
+    (1, 'Buy groceries', 0),
+    (1, 'Finish Java App', 0),
+    (1, 'Party over the weekend!', 0),
+    (1, 'Go to the gym', 0),
+    (1, 'Buy groceries', 0);
