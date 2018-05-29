@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { AuthService } from '../shared/services/auth.service';
 
 @Component({
-  templateUrl: './app/components/login.component.html'
+  templateUrl: './login.component.html'
 })
 export class LoginComponent implements OnInit {
   credentials = { username: '' };

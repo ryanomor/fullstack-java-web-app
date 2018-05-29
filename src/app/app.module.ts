@@ -9,7 +9,7 @@ import { PageNotFoundComponent } from './components/pageNotFound.component';
 import { LoginComponent } from './components/login.component';
 import { TaskComponent } from './components/task.component';
 
-import { UserService } from './services/user.service';
+import { UserService } from './shared/services/user.service';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';

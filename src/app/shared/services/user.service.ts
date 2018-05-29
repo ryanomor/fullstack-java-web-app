@@ -92,7 +92,7 @@ export class UserService {
   private toUser(user): User {
     return {
       id: user.id,
-      user_name: user.username
+      user_name: user.user_name
     };
   }
 
