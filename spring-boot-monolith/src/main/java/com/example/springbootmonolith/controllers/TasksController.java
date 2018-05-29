@@ -17,7 +17,7 @@ public class TasksController {
     @Autowired
     private TaskRepository taskRepository;
 
-//    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "http://localhost:4200")
 
     @GetMapping("/tasks")
     public Iterable<Task> findAllTasks() {

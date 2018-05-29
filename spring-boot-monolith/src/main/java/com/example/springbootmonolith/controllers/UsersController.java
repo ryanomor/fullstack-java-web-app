@@ -18,7 +18,7 @@ public class UsersController {
     @Autowired
     private UserRepository userRepository;
 
-//    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "http://localhost:4200")
 
     @GetMapping("/users")
     public Iterable<User> findAllUsers() {
