@@ -34,6 +34,9 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
+  exports: [
+    RouterModule
+  ],
   providers: [
     UserService,
   ],
