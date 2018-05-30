@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
+import { catchError, map, tap } from 'rxjs/operators';
+
 import { User } from '../models/users.component';
 
 @Injectable()
@@ -24,7 +26,6 @@ export class UserService {
   getUsers(): Observable<User[]> {
     return this.http.get(this.usersUrl)
       .map(res => res.json().data)
-      .map(users => users.map(this.toUser))
       .catch(this.handleError);
   }
 
