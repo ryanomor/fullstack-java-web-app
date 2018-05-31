@@ -29,6 +29,8 @@ public class TasksController {
         return taskRepository.findById(taskId);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
+
     @GetMapping("/tasks/user/{username}")
     public List<Task> findTasksByUsername(@PathVariable String username) {
         return taskRepository.findTasksByUsername(username);
