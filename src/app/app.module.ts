@@ -1,47 +1,37 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+import { TaskComponent } from './components/task/task.component';
+import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/pageNotFound.component';
-import { LoginComponent } from './components/login.component';
-import { TaskComponent } from './components/task.component';
+import { AppRoutingModule } from './/app-routing.module';
 
-import { UserService } from './shared/services/user.service';
-
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-
-const appRoutes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'home', component: TaskComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent },
-];
+import { UserService } from './services/user.service';
+import { TaskService } from './services/task.service';
+import { FriendsListComponent } from './components/friends-list/friends-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskComponent,
     LoginComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FriendsListComponent
   ],
   imports: [
-    BrowserModule,
     FormsModule,
-    HttpModule,
-    RouterModule,
-    RouterModule.forRoot(appRoutes)
-  ],
-  exports: [
-    RouterModule
+    BrowserModule,
+    AppRoutingModule, 
+    HttpClientModule,
   ],
   providers: [
     UserService,
+    TaskService,
+    LoginComponent
   ],
   bootstrap: [AppComponent]
 })
-
 export class AppModule { }

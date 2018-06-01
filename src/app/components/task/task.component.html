@@ -1,0 +1,43 @@
+<nav>
+    <a routerLink="/tasks/{{ username }}"> Dashboard </a>
+    <a routerLink="/{{ username }}/friends"> Friends </a>
+    <a routerLink="/" (click)="logout()"> Logout </a>
+</nav>
+
+<div style="text-align:center">
+  <h1>
+    Welcome back, {{ username }}!
+  </h1>
+  <!-- Show user's tasks -->
+  <h2> {{ username }}'s tasks</h2>
+
+  <!-- Incomplete tasks -->
+  <h3>Incomplete: </h3>
+
+  <ul class="tasks">
+    <li *ngFor="let task of userTasks">
+        <div *ngIf="!task.completed">
+          {{ task.task }}
+          <!-- checkbox to mark as completed -->
+          <span>
+            <input type="checkbox" (click)="handleCheckbox(task)" /> Completed 
+          </span>
+        </div>
+    </li>
+  </ul>
+
+  <!-- Completed tasks -->
+  <h3>Completed:</h3>
+
+  <ul class="tasks">
+    <li *ngFor="let task of userTasks">
+        <div *ngIf="task.completed">
+            {{ task.task }}
+            <!-- checkbox to mark as incomplete -->
+          <span>
+              <input type="checkbox" (click)="handleCheckbox(task)" /> Incomplete 
+            </span>
+        </div>
+    </li>
+  </ul>
+</div>
