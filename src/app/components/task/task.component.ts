@@ -26,9 +26,9 @@ export class TaskComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if (this.login.loggedIn === false) {
-      this.router.navigate([`/`]);
-    }
+    // if (this.login.loggedIn === false) {
+    //   this.router.navigate([`/`]);
+    // }
     this.username = this.route.snapshot.paramMap.get('username');
     this.getTasks();
 
