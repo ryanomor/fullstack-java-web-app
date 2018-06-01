@@ -13,3 +13,8 @@ cd to the root directory:
 npm install  
 ng serve
 ```
+
+## Use one of the mock users to login
+** Ryry **  
+** Rah **  
+** Blaze **

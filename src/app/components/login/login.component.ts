@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
 
     if (this.user) {
       this.loggedIn = true;
-      console.log(this.loggedIn);
+      console.log("Login Compoenent", this.loggedIn);
       this.router.navigate([`tasks/${this.user.username}`]);
     } else {
       this.errorMessage = "Incorrect username";
