@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   public credentials = { username: '' };
   public users: User[];
   private user: User;
-  public loggedIn: boolean = false;
+  public loggedIn: boolean;
   private errorMessage: string = '';
 
   constructor(private service: UserService, private router: Router) { }
@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
 
     if (this.user) {
       this.loggedIn = true;
+      console.log(this.loggedIn);
       this.router.navigate([`tasks/${this.user.username}`]);
     } else {
       this.errorMessage = "Incorrect username";

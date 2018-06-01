@@ -31,6 +31,8 @@ export class TaskComponent implements OnInit {
     }
     this.username = this.route.snapshot.paramMap.get('username');
     this.getTasks();
+
+    console.log(this.login.loggedIn);
   }
 
   /**
